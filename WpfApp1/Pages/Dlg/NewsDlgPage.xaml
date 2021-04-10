@@ -1,0 +1,42 @@
+﻿<Page x:Class="WpfApp1.Pages.Dlg.NewsDlgPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages.Dlg"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="NewsDlgPage">
+
+    <Grid>
+        <StackPanel>
+            <Label Name="NamePageLabel" Content="Изменить новость" FontSize="18" Background="LightGray"/>
+            <!--             String S = "Select n.news_id, n.header_char,n.description,n.full_text,n.date_make,n.date_update, k.name_kategory " +
+                       "from news n " +
+                       "inner join kategories k on(k.kategory_id = n.kategory_id)"; -->
+
+            <Label Content="Заголовок новости: " />
+            <TextBox Name="HeaderTextBox" />
+            <Label Content="Описание: " />
+            <TextBox Name="DescriptionTextBox"  />
+            <Label Content="Cтатья: " />
+            <TextBox Name="FullTextTextBox"  />
+            <Label Content="Дата: " />
+            <DatePicker Name="DatePostDatePicker"/>
+            <Label Content="Дата изменения: " />
+            <DatePicker Name="DateChangeDatePicker"/>
+            <Label Content="Категроия: " />
+            <ComboBox Name="KategoryComboBox" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Button Name="OkButton" Content="Ок" Width="60" Margin="5,5"  
+                        Click="OkButton_Click"/>
+                <Button Name ="CloseButton" Content="Отмена" Width="60" Margin="5,5" 
+                        Click="CloseButton_Click"/>
+            </StackPanel>
+
+
+        </StackPanel>
+
+    </Grid>
+</Page>

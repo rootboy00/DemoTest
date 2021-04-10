@@ -1,0 +1,33 @@
+﻿<Page x:Class="WpfApp1.Pages.Dlg.UserDlgPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages.Dlg"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="UserDlgPage">
+
+    <Grid>
+        <StackPanel>
+            <Label Name="NamePageLabel" Content="Изменить Пользователя" FontSize="18" Background="LightGray"/>
+
+            <Label Content="Логин: " />
+            <TextBox Name="LoginTextBox" />
+            <Label Content="Почта: " />
+            <TextBox Name="EmailTextBox" />
+            <Label Content="Пароль: " />
+            <TextBox Name="PasswordTextBox" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Button Name="OkButton" Content="Ок" Width="60" Margin="5,5"  
+                        Click="OkButton_Click"/>
+                <Button Name ="CloseButton" Content="Отмена" Width="60" Margin="5,5" 
+                        Click="CloseButton_Click"/>
+            </StackPanel>
+
+
+        </StackPanel>
+
+    </Grid>
+</Page>
